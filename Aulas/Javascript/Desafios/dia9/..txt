@@ -1,0 +1,4 @@
+Dia 9
+Missão: Verificando confirmação para o usuário.
+Objetivo:
+● Estrutura de decisão switch (caso)

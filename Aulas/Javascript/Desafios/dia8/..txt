@@ -1,0 +1,3 @@
+Missão: Efetuar uma das 4 operações matemáticas básicas.
+Objetivo:
+● Estrutura de decisão switch (caso)

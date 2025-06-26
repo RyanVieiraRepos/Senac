@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png" class="logo" height="150">
+        <h1>MovieFlix</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="todos-os-filmes.html">Filmes</a>
+            <a href="#">Notícias</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <h2>Melhores avaliações</h2>
+    <div class="lista-filmes">
+        
+        
+    </div>
+    <footer class="rodape">
+        <hr>
+        <img src="img/logo.png">
+        <small>
+            2025
+        </small>
+    </footer>
+
+    <script>
+        async function fnPegarFilmes() {        //função async, pega dados de um arquivo externo e os retorna no console
+  let filmes = await fetch("dados-filmes.json") //variável contendo um fetch await de um arquivo json
+  let filmesTratados = await filmes.json()       //var contendo a variável filmes acompanhada da função await contendo o fetch da variável filmes
+
+  filmesTratados.slice(13,18).forEach((filmeAtual) => {    //método forEach (percorre cada elemento da array contida na variável filmesTratados), 
+
+    //filmesAtual foi criado dentro do metodo forEach   
+    // //o método forEach executa uma função para cada elemento encontrado em uma variável, 
+    // especialmente arrays, no caso um console.log de cada variável contida no arquivo JSON requisitado
+    document.querySelector(".lista-filmes").innerHTML +=
+      `
+       <div class="card-filme">
+          <img src=img/${filmeAtual.foto}>
+          <h3>${filmeAtual.titulo}</h3>
+          <span>${filmeAtual.ano}</span>
+          <h4>${filmeAtual.genero}</h4>
+          <p>${filmeAtual.sinopse}</p>
+          <span>⭐${filmeAtual.avaliacao}</span>
+       </div>`
+   // 16 itens
+    console.dir(filmeAtual);
+  });
+}
+        
+
+let filmes = document.getElementById(".card-filmes")
+fnPegarFilmes()
+console.log("oi")
+
+
+    </script>
+</body>
+
+</html>
