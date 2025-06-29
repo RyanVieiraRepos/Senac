@@ -1,0 +1,4 @@
+Missão: Validar se um candidato pode ou não iniciar o
+processo de CNH
+Objetivo:
+● Estrutura de decisão if (se)

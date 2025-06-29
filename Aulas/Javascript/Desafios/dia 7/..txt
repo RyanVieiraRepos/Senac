@@ -1,0 +1,6 @@
+Dia 6
+Missão: Calcular as horas extras de um funcionário a partir
+das horas semanais trabalhadas. Considerar a carga horária
+do funcionário de 44 horas por semana.
+Objetivo:
+● Estrutura de decisão if (se)
