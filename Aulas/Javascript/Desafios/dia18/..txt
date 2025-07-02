@@ -1,0 +1,5 @@
+Missão: Dicionário de animais
+Objetivo:
+● Array
+● Laço de repetição
+● Estrutura de decisão

@@ -1,0 +1,5 @@
+Dia 15
+Missão: Armazenando lista de carros de um estacionamento
+Objetivo:
+● Utilizando Array
+● Laço de repetição(while)
