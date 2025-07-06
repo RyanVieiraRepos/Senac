@@ -1,3 +1,4 @@
+Dia 18
 Missão: Dicionário de animais
 Objetivo:
 ● Array
