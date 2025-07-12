@@ -15,6 +15,14 @@ while(novoConteudo == "S"){
 
     //isso normalmente seria feito com um formulário html, não utilizando o método prompt
 conteudoTemp = prompt("Informe o conteudo do curso","Digite aqui");
-conteudodoCurso.at(conteudoTemp); //array.push, empurra informações para a array, no caso, o da variável conteudoTemp = ""
-novoContaudo = prompt("Deseja cadastrar um novo conteúdo para o curso?[S]im / [N]ao" ,  "Digite aqui")
+conteudodoCurso.push(conteudoTemp); //array.push, empurra informações para a array, no caso, o da variável conteudoTemp = ""
+novoConteudo = prompt("Deseja cadastrar um novo conteúdo para o curso?[S]im / [N]ao" ,  "Digite aqui");
+} 
+
+console.log("Código: " + codigoCurso);
+console.log("Curso: " + nomeCurso);
+console.log("Conteudo: ");
+while(contador < conteudodoCurso.length){
+    console.log(conteudoCurso[contador]);
+    contador++;
 }
