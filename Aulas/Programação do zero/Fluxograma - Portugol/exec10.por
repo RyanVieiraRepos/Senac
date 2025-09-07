@@ -13,14 +13,20 @@ programa {
 
     inicio = b
     fim = c
-   
+    inteiro conta = a * b
 
-    enquanto(inicio <= fim){
-      
-      escreva(a * )
-      inicio++
+    enquanto(b <= c){
+
+      escreva(a * b, "\n")
+    
+    
+      b++
+
+    }
+
+    
     }
 
  
   }
-}
+

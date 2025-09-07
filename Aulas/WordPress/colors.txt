@@ -1,5 +1,0 @@
-gradien 
-wdpress
-
-color1 EEC38E
-     2 DAA385
