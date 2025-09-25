@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+    font-family:Work Sans;
+
+    font-weight: 700;
+    
+    
+}
+body {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(117, 89, 70);;
+    transition: 0.5s;
+
+}
+
+.Container {
+    
+    padding: 2vw;
+    border-radius: 0.3vw;
+    border-color: white;
+    border: 3px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.3s;
+    text-align: center;
+    
+}
+
+
+
+
+input {
+    background-color: none;
+    background: none;
+
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: white;
+
+    border: 1px solid white;
+    border-radius: 0.3vw;
+
+    color: white;
+    caret: white;
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+
+    width: 10vw;
+
+    text-align: center;
+
+    height: 25px;
+
+    font-size: 1.2rem;
+
+}
+
+select{
+    
+    
+    text-align: center;
+    width: vw;
+    padding: 0.4vw;
+    
+}
+option{
+    background: none;
+    background-color: none;
+    
+}
+
+input::placeholder {
+    color: white;
+    opacity: 60%;
+}
+
+#btn {
+    margin-top: 2vw;
+    margin-bottom: 0.6vw;
+    padding: 0.4vw;
+    width: 10vw;
+
+    border: none;
+    border-radius: 0.3vw;
+    font-size: 1.1rem;
+
+    color: rgb(128, 146, 196);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.05s;
+    cursor: pointer;
+}
+
+#btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+.numCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    margin-right: 6vw;
+}
+
+
+
+.popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    height: 6vw;
+    color: white;
+    width: 20vw;
+    height: 10vw;
+    border-radius: 1vw;
+    background-color: rgb(241, 241, 241);
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup strong {
+    color: rgb(128, 146, 196);
+    font-size: 1.3rem;
+    font-weight: 600;
+
+}
+
+#btn1 {
+    width: 6vw;
+    border: none;
+    background-color: rgb(128, 146, 196);
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    border-radius: 0.4vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.1s;
+    margin-top: 3vw;
+}
+
+#btn1:hover {
+    transform: scale(1.1);
+}
+
+img{
+ width: 20vw;
+ border-radius: 0.4vw;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
