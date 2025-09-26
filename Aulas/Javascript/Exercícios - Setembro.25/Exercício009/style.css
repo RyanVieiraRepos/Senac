@@ -1,30 +1,30 @@
 body {
-     background-color: rgb(15, 15, 15)  ;
+    background-color: rgb(15, 15, 15);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 
+    margin: 0;
     color: white;
 
 }
 
-.titleCont{
+.titleCont {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-.calcCont{
-display: flex;
-justify-content: space-between;
+.calcCont {
+    display: flex;
+    justify-content: space-between;
 }
 
 .Container {
 
-    
+
     margin: 3vw;
     padding: 2vw;
     border-radius: 0.8vw;
@@ -33,10 +33,10 @@ justify-content: space-between;
     justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    background-color: rgb(6, 49, 40)  ;
+    background-color: rgb(6, 49, 40);
 }
 
-strong{
+strong {
     color: rgb(6, 49, 40);
 }
 
@@ -59,7 +59,7 @@ input {
     margin-top: 1vw;
     margin-bottom: 1vw;
 
-    width:auto;
+    width: auto;
 
     text-align: center;
 
@@ -106,7 +106,9 @@ input::placeholder {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.05s;
     cursor: pointer;
-}#btnDiv:hover {
+}
+
+#btnDiv:hover {
     transform: scale(1.1);
 }
 
@@ -174,21 +176,21 @@ input::placeholder {
 
 
 
-li{
-    
+li {
+
     width: auto;
-    
+
     color: white;
     font-weight: 1000;
     font-size: 1.2rem;
-    padding:10px;
+    padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
     align-self: center;
-    
+
 }
 
-#limpar{
+#limpar {
     width: 6vw;
     border: white solid 1px;
     background-color: rgb(6, 49, 40);
@@ -200,6 +202,15 @@ li{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.1s;
     margin-top: 3vw;
-}#limpar    :hover {
+}
+
+#limpar :hover {
     transform: scale(1.1);
+}
+
+iframe {
+    width: 100%;
+    border: none;
+    background-color: white;
+    margin: 0;
 }

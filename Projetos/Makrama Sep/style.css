@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(rgb(199, 167, 107), rgb(138, 112, 55));
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+
+}
+
+
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+
+    margin: 0;
+}

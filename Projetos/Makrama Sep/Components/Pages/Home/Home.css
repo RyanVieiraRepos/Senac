@@ -1,0 +1,57 @@
+    @media(max-width:630px) {}
+
+    .homeBody {
+      margin: 0;
+    }
+
+    .homeMain {
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+    }
+
+    .homeCont {
+
+
+      width: 100%;
+      height: 800px;
+
+    }
+
+    .homeCont img {
+      width: 100%;
+      height: 800px;
+    }
+
+    .homeFrete {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      width: 100%;
+      height: 1.5vw;
+
+
+      margin: 0;
+
+      background-color: rgb(255, 224, 204);
+      border-top: 1px solid rgb(56, 40, 18);
+
+      color: rgb(56, 40, 18);
+    }
+
+    .homeFrete li {
+      margin: 1vw;
+      font-size: 1.2rem;
+    }
+
+    .homeFrete li:nth-child(1) {
+      margin: 3vw;
+    }
+
+    .homeFrete li:nth-child(4) {
+      margin: 3vw;
+    }
