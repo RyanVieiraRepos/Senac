@@ -23,7 +23,17 @@
     .homeCont img {
       width: 100%;
       height: 800px;
+      border-radius: 10px;
     }
+
+
+
+
+
+
+
+
+
 
     .homeFrete {
       display: flex;

@@ -1,0 +1,18 @@
+body {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.headerCont a {
+    background-color: aliceblue;
+}
+
+#headerCart {
+    height: 1rem;
+
+}
