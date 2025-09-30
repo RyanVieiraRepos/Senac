@@ -1,0 +1,17 @@
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+
+    margin: 0px;
+
+    border-radius: 10px;
+
+    color: white;
+    background: linear-gradient(180deg, rgba(195, 151, 90, 0.896), rgb(195, 156, 101));
+    background-repeat: no-repeat;
+
+}
