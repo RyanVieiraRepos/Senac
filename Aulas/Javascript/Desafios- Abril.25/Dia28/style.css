@@ -1,4 +1,4 @@
-body {
+    body {
     background-color: rgb(15, 15, 15);
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ button:hover {
     margin-top: 2vw;
     margin-bottom: 0.6vw;
     padding: 0.4vw;
-    width: 10vw;
+    width: 180px;
 
     border: none;
     border-radius: 0.3vw;
@@ -151,13 +151,10 @@ button:hover {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20vw;
-    height: 6vw;
     color: rgb(6, 49, 40);
-    width: 20vw;
-    height: 10vw;
     border-radius: 1vw;
     background-color: rgb(241, 241, 241);
+    padding: 1.5vw;
 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
@@ -176,13 +173,14 @@ button:hover {
 }
 
 #btn1 {
-    width: 6vw;
+    width: auto;
+    padding: 0.5vw;
     border: none;
     background-color: rgb(6, 49, 40);
     color: white;
     cursor: pointer;
     font-size: 1.2rem;
-    padding: 0.2rem;
+    
     border-radius: 0.4vw;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.1s;
@@ -223,4 +221,15 @@ li {
 
 #limpar :hover {
     transform: scale(1.1);
+}
+
+
+select{
+
+width: 200px;
+align-items: center;
+border: none;
+padding: 0.3vw;
+} select::selection{
+    border: none;
 }

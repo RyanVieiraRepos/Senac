@@ -37,18 +37,22 @@
 
         <h1>Orçamento</h1>
 
-        <input type="number" id="total" placeholder="Total em R$" required>
-        <input type="number" id="porcentagem" placeholder="Porcentagem" required>
+        <input type="number" id="total" placeholder="Total em R$">
+        <input type="number" id="porcentagem" placeholder="Porcentagem %">
 
-        <select>
-            <option>Desconto</option>
-            <option>Acrescimo</option>
+        <select id="select">
+            <option value="acre">Acrescimo</option>
+            <option value="desc">Desconto</option>
         </select>
-        <button type="button" id="btn">Acessar</button>
-        <div id="popup"></div>
+        <button type="button" id="btn">Calcular</button>
+
 
     </div>
+    <div id="popup" style="display: none;">
+        <strong>Preencha os campos</strong>
+        <button id="btn1">Ok!</button>
 
+    </div>
 
 
 
