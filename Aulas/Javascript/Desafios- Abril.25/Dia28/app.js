@@ -1,53 +1,71 @@
 
 
+
+
 btn.addEventListener("click", () => {
 
-  let inputTotal = parseFloat(document.getElementById("total").value)
-  let inputPorcentagem = parseFloat(document.getElementById("porcentagem").value)
-  let select = document.getElementById("select").value
-  let btn = document.getElementById("btn")
-  let popup = document.getElementById("popup")
+
+  btn = document.getElementById("btn")
+  popup = document.getElementById("popup")
+  inputTotal = parseFloat(document.getElementById("total").value)
+  inputPorcentagem = parseFloat(document.getElementById("porcentagem").value)
+  select = document.getElementById("select").value
+
+
+  console.log("valores : " + inputTotal + " " + inputPorcentagem + " " + select)
 
   operacao(inputTotal, inputPorcentagem, select, popup)
-  console.log("valores : " + inputTotal + " " + inputPorcentagem + " " + select)
+
+
 
 })
 
 
 function operacao(total, porcentagem, operacao, popup) {
 
-  valorPorcentagem = porcentagem / 100 * total
+  const valorPorcentagem = porcentagem / 100 * total
 
 
 
   if (!total || !porcentagem) {
 
-    popup.innerHTML.display = "flex"
+    console.log("Preencha os campos!")
 
-    btn1 = document.getElementById("btn1")
+    popup.style.display = "flex"
+    document.getElementById("popup").innerHTML = `
+      
+        <strong>Preencha os campos</strong>
+        <button id="btn1">Ok!</button>
+     
+     `
+
     btn1.addEventListener("click", () => {
-      document.getElementById("popup").style.display = "none"
+      popup.style.display = "none",
+        console.log("btn1")
     },
 
-      console.log("Preencha os campos!")
+
+
     )
-    
+
   } else if (operacao == "acre") {
 
     totalPagar = total + valorPorcentagem
 
 
+
     popup.innerHTML = `
-      <div id=popup class="popup">
+      
        <strong>Valor Total : R$${totalPagar.toFixed(2)}</strong>
        <button id=btn1>Finalizar Pedido</button>
-      </div>
+      
      `
     popup.style.display = "flex"
 
-    btn1 = document.getElementById("btn1")
+    let btn1 = document.getElementById("btn1")
     btn1.addEventListener("click", () => {
       popup.style.display = "none"
+
     }),
 
       console.log("total : " + totalPagar)
@@ -57,14 +75,14 @@ function operacao(total, porcentagem, operacao, popup) {
     totalPagar = total - valorPorcentagem
 
     popup.innerHTML = `
-      <div id=popup class="popup">
+      
        <strong>Valor Total : R$${totalPagar.toFixed(2)}</strong>
        <button id=btn1>Finalizar Pedido</button>
-      </div>
+      
      `
-    popup.style.display = "inline"
+    popup.style.display = "flex"
 
-    btn1 = document.getElementById("btn1")
+    let btn1 = document.getElementById("btn1")
     btn1.addEventListener("click", () => {
 
       popup.style.display = "none"
@@ -75,6 +93,9 @@ function operacao(total, porcentagem, operacao, popup) {
       console.log("total : " + totalPagar)
 
   }
+
+
+
 }
 
 
