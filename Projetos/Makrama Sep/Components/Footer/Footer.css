@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    position: fixed;
+    position: ;
     left: 0%;
     bottom: 0%;
 
@@ -48,6 +48,11 @@
     margin-left: 25px;
 
     cursor: pointer;
+    transition: 0.1s;
+
+}.footerLinks strong:hover {
+    
+    transform: scale(1.1);
 
 }
 
@@ -56,47 +61,21 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.linksContainer {
-    margin-top: 1vh;
-    align-items: center;
+.footerSocials{
     display: flex;
-    margin-bottom: clamp(38px, 5.8vh, 58px);
+    justify-content: center;
+    align-items: center;
 
 
-}
+}.footerSocials svg{
 
-.whatsappContainer {
-
-
-    cursor: pointer;
+    margin-top:20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 40px;
     transition: 0.1s;
-}
-
-.whatsappContainer:hover {
-    transform: scale(1.1);
-}
-
-.instagramContainer {
-
-
     cursor: pointer;
-    transition: 0.1s;
-}
+}.footerSocials svg:hover{
 
-.instagramContainer:hover {
-    transform: scale(1.1);
+   transform: scale(1.1);
 }
