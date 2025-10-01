@@ -14,10 +14,13 @@ function fnSalvarNumero() {
 
   listaDeNumeros.push(numero)
   console.log(listaDeNumeros)
+
+  document.getElementById("result").innerHTML=``
 }
 
 function fnCalcularMedia() {
-
+  
+  
   somaDosNumeros = 0
   media = 0   // media todos somados dividido pela qtd de valores
   qtdNumeros = listaDeNumeros.length // qtd = qtd de indices da array
@@ -27,10 +30,14 @@ function fnCalcularMedia() {
     somaDosNumeros += listaDeNumeros[i]
   }
   media = somaDosNumeros / qtdNumeros
-  
+
   console.log("média: " + media)
 
-  document.getElementById("inputs").innerHTML+=`
-  <strong>Média : ${media}</strong>
+  document.getElementById("result").innerHTML+=`
+  <strong>Média : ${media.toFixed(2)}</strong>
   `
+
+  listaDeNumeros=[]
 }
+
+

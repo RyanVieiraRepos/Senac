@@ -25,15 +25,16 @@ body {
     padding: 2vw;
     border-radius: 0.8vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
    
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     background-color: rgb(6, 49, 40)  ;
 }
 
 strong{
-    color: rgb(255, 255, 255);
+    color: rgb(6, 49, 40);
 }
 
 
@@ -169,7 +170,6 @@ input::placeholder {
 }
 
 
-
 li{
     
     color: white;
@@ -199,29 +199,19 @@ li{
 }form{
     display: flex;
     flex-direction: column;
-}
-
-button{
+}button{
     
-    padding: 2vw;
+    
     border: none;
     background-color: rgb(255, 255, 255);
     color: rgb(6, 49, 40);
     cursor: pointer;
-    font-size: 1.3rem;
-    padding: 0.2rem;
+    font-size: 20px ;
+    
     border-radius: 0.4vw;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.05s;
     margin-top: 1vw;
 }button:hover {
     transform: scale(1.1);
-}
-
-#inputs{
-    display: flex;
-    flex-direction: column;
-}#formulario{
-    display: flex;
-    flex-direction: row;
 }
