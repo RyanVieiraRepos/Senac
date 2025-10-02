@@ -1,3 +1,16 @@
+@media (width <= 1360px )  {
+  .homeCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }.homeText{
+    align-items: center;
+  }.homeText button{
+    margin-bottom: 40px;
+  }
+}
+
 .homeCont {
   display: flex;
   
@@ -39,7 +52,9 @@
   font-size: 1.2rem;
 }
 
-.homeImage {}
+.homeImage {
+  width: clamp(300px,400px,400px);
+}
 
 .homeImage img {
   width: 100%;
