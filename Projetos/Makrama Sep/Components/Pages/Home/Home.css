@@ -1,23 +1,51 @@
-@media (width <= 1360px )  {
-  .homeCont{
+@media (width <=1360px) {
+  .homeCont {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+  }
+
+  .homeText {
     align-items: center;
-  }.homeText{
-    align-items: center;
-  }.homeText button{
+  }
+
+  .homeText button {
     margin-bottom: 40px;
   }
 }
 
+
+
+
+
+.homeImage {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.homeImage img {
+  margin-right: 0px;
+}
+
+
+
+
+
+
+
+
 .homeCont {
   display: flex;
-  
   justify-content: space-between;
 
-  margin-left: 10.5vw;
-  margin-right: 10.5vw;
+
+
+
+  margin-left: 6vw;
+  margin-right: 6vw;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -25,27 +53,34 @@
 .homeText {
   display: flex;
   flex-direction: column;
-  
-  
+
+
 
   justify-content: first baseline;
-}.homeText strong {
+}
+
+.homeText strong {
   font-size: 3.5rem;
 }
+
 .homeText button {
   width: 200px;
   height: 50px;
-  border:none;
+  border: none;
   border-radius: 10px;
 
-  color:rgba(195, 151, 90, 0.896) ;
+  color: rgba(195, 151, 90, 0.896);
   font-size: 1.6rem;
   transition: 0.1s;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}.homeText button:hover{
+}
+
+.homeText button:hover {
   transform: scale(1.1);
-}.homeText p{
+}
+
+.homeText p {
   width: 600px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -53,12 +88,19 @@
 }
 
 .homeImage {
-  width: clamp(300px,400px,400px);
+
+  display: flex;
+  flex-direction: row;
+
 }
 
 .homeImage img {
-  width: 100%;
-  height: auto;
+  width: 800px;
+  height: 500px;
+
+
+
+  margin-right: ;
 
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
