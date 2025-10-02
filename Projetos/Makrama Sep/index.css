@@ -20,4 +20,14 @@ body {
     min-height: 100vh;
 }
 
-.layout {}
+#layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    flex: 1; 
+
+    margin-top: 50px;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}

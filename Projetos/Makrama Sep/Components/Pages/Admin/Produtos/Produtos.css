@@ -1,0 +1,8 @@
+.pedidosCont{
+    background-color: white;
+    width: 1400px;
+    height: auto;
+}
+.pedidosCont strong{
+    color: rgb(47, 27, 1);
+}
