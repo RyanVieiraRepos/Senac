@@ -1,0 +1,168 @@
+body,html {
+     background-color: rgb(14, 14, 14)  ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    color: white;
+
+    min-height: 100dvh;
+    
+
+    
+
+}
+
+.titleCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.Container {
+
+    margin: 3vw;
+    padding: 2vw;
+    border-radius: 0.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: rgb(6, 49, 40)  ;
+}
+
+strong{
+    color: rgb(6, 49, 40);
+}
+
+
+.input {
+    background-color: none;
+    background: none;
+
+   
+    border: 1px solid white;
+    border-radius: 0.3vw;
+
+    color: white;
+    caret: white;
+
+    margin-top: 0.7w;
+    margin-bottom: 0.7vw;
+
+    width:200px;
+
+    text-align: center;
+
+    height: 25px;
+
+    font-size: 1.4rem;
+
+    padding: 5px;
+
+}
+
+
+
+input::placeholder {
+    color: white;
+    opacity: 60%;
+}
+
+
+
+
+
+
+.popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    height: 6vw;
+    color: rgb(6, 49, 40);
+    width: 20vw;
+    height: 10vw;
+    border-radius: 1vw;
+    background-color: rgb(241, 241, 241);
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup strong {
+    color: rgb(6, 49, 40);
+    font-size: 1.3rem;
+    font-weight: 600;
+
+}
+
+
+
+
+li{
+    
+    color: white;
+    font-weight: 1000;
+    font-size: 1.2rem;
+    padding:10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-self: center;
+    
+}
+
+
+#button{
+    
+    
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(6, 49, 40);
+    cursor: pointer;
+    font-size: 20px ;
+    
+    width: 220px;
+    height: 35px;
+
+    border-radius: 0.4vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.05s;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}#button:hover {
+    transform: scale(1.1);
+}
+#limpar{
+    
+    
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(6, 49, 40);
+    cursor: pointer;
+    font-size: 20px ;
+    
+    width: 220px;
+    height: 35px;
+
+    border-radius: 0.4vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.05s;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}#limpar:hover {
+    transform: scale(1.1);
+}
