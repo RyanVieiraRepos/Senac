@@ -1,6 +1,6 @@
 class Produtos extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         
          <div class="produtosCont">
 
@@ -28,7 +28,7 @@ class Produtos extends HTMLElement {
         
         <strong>Veículo</strong>
 
-        <strong>Ações</strong>
+        
       </div>
 
 
@@ -37,5 +37,5 @@ class Produtos extends HTMLElement {
 
     </div>
         `
-    }
+  }
 } customElements.define("dash-produtos", Produtos)
