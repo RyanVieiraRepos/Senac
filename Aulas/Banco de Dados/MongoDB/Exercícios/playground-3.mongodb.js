@@ -129,7 +129,7 @@
 
 //68eda4672cdceda1b118d548
 
-use('alienigenas_turistas')
+// use('alienigenas_turistas')
 
 
 // db.alienigenas_turistas.insertMany([
@@ -159,4 +159,60 @@ use('alienigenas_turistas')
 // db.alienigenas_turistas.find().sort({gasto_medio:-1}).limit(1) 
 
 
-db.alienigenas_turistas.find().sort({ destino:1 })
+// db.alienigenas_turistas.find().sort({ destino:1 })
+
+use('naves_exploradoras')
+
+
+
+
+// db.naves_exploradoras.insertMany([
+//     {nome:"Estrela Veloz",modelo:"GX-900",comandante:"Capitã Luna",destino:"Andrômeda",tripulantes:8,status:"Em Missão",autonomia_dias:120,},
+//     {nome:"Aurora Nebulosa",modelo:"ZX-12",comandante:"Comandante Vork",destino:"Galáxia Sombria",tripulantes:5,status:"Em manutenção",autonomia_dias:80,},
+//     {nome:"Cometa Dourado",modelo:"TX-77",comandante:"Tenente Zog",destino:"Saturno",tripulantes:"12",status:"Em missão",autonomia_dias:150,},
+//     {nome:"Eclipse Rubro",modelo:"RX-404",comandante:"Capitão Blork",destino:"Buraco Negro Beta",tripulantes:3,status:"Perdida",autonomia_dias:60,},
+//     {nome:"Lótus Cósmica",modelo:"NX-222",comandante:"Dra. Kora",destino:"Terra",tripulantes:10,status:"Em reparos",autonomia_dias:100,}
+// ])
+
+// db.naves_exploradoras.find(
+//     {autonomia_dias:{$gt:100}},
+//     {modelo:0,comandante:0,tripulantes:0,status:0,_id:0}
+// )
+
+
+
+
+
+// db.clientes.updateOne(
+//     {_id: ObjectId('68eda4672cdceda1b118d548') },
+//     {$rename: {"nomme": "nome"}}                       //RENOMEANDO CAMPO
+// )
+
+// db.alienigenas_turistas.updateOne(
+//     {nome:"moolah"},
+//     {$set:{numero_de_tentaculos:4}}
+
+// )
+
+//68f61f9c3430629148bfbf67 //ecplipse rubro
+// db.naves_exploradoras.updateOne(
+//     {_id:ObjectId( '68f61f9c3430629148bfbf67')}, //consulta nichada para este documento, caso contrário, todos os status "Perdida" seriam alterados
+    
+//     {$set:{status:"Resgatada"}}
+    
+// )
+
+
+
+
+//"68f61f9c3430629148bfbf65" // Aurora Nebulosa
+
+db.naves_exploradoras.updateOne(
+    {_id:ObjectId("68f61f9c3430629148bfbf65")},
+    {$set:{autonomia_dias:"120"}}
+)
+
+db.naves_exploradoras.find(
+{_id:ObjectId("68f61f9c3430629148bfbf65")}
+
+)
