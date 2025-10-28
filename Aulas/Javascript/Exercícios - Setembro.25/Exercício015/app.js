@@ -8,14 +8,19 @@ let contatos = []
 
 function fnSalvar() {
     nome = document.getElementById('nome').value,
-        telefone =  document.getElementById('telefone').value,
-            email =  document.getElementById('email').value,
-                foto = document.getElementById('foto').value
+        telefone = document.getElementById('telefone').value,
+        email = document.getElementById('email').value,
+        foto = document.getElementById('foto').value
 
 
     if (nome == '' || email == '' || telefone == '' || foto == '') {
         console.dir(nome + foto + email + telefone)
         document.getElementById('popup').style.display = 'flex'
+
+
+
+
+        
     } else {
 
         let umContato = {
@@ -58,7 +63,7 @@ function fnListar() {
 
 function fnExluir() {
 
-    
+
 }
 
 

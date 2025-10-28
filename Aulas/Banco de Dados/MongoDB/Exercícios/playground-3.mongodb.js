@@ -28,7 +28,7 @@
 //         {idade: {$gt:18}},
 //         {idade: {$it:50}}
 //     ]
-    
+
 // })
 
 
@@ -54,7 +54,7 @@
 //     {nome:'Beatriz',idade:22,cidade:'Curitiba'},
 
 //     {nome:'Fernando',idade:35,cidade:'Rio de Janeiro'},
-    
+
 //     {nome:'Lucia',idade:30,cidade:'Belo Horizonte'}
 // ])
 
@@ -161,7 +161,7 @@
 
 // db.alienigenas_turistas.find().sort({ destino:1 })
 
-use('naves_exploradoras')
+// use('naves_exploradoras')
 
 
 
@@ -197,9 +197,9 @@ use('naves_exploradoras')
 //68f61f9c3430629148bfbf67 //ecplipse rubro
 // db.naves_exploradoras.updateOne(
 //     {_id:ObjectId( '68f61f9c3430629148bfbf67')}, //consulta nichada para este documento, caso contrário, todos os status "Perdida" seriam alterados
-    
+
 //     {$set:{status:"Resgatada"}}
-    
+
 // )
 
 
@@ -207,12 +207,111 @@ use('naves_exploradoras')
 
 //"68f61f9c3430629148bfbf65" // Aurora Nebulosa
 
-db.naves_exploradoras.updateOne(
-    {_id:ObjectId("68f61f9c3430629148bfbf65")},
-    {$set:{autonomia_dias:"120"}}
-)
+// db.naves_exploradoras.updateOne(
+//     {_id:ObjectId("68f61f9c3430629148bfbf65")},
+//     {$set:{autonomia_dias:"120"}}
+// )
 
-db.naves_exploradoras.find(
-{_id:ObjectId("68f61f9c3430629148bfbf65")}
+// db.naves_exploradoras.find(
+// {_id:ObjectId("68f61f9c3430629148bfbf65")}
 
+// )
+
+
+// use("sala");
+// db.aluno.deleteMany({})
+
+// db.aluno.insertMany([
+//     { nome: "Paulo", idade: 22, curso: "TII", lab: "lab1" },
+//     { nome: "Eduardo", idade: 17, curso: "Enfermagem", lab: "lab11" },
+//     { nome: "Pedro", idade: 18, curso: "TST", lab: "lab6" },
+//     { nome: "Victor", idade: 25, curso: "Enfermagem", lab: "lab11" },
+//     { nome: "Murilo", idade: 40, curso: "TST", lab: "lab6" },
+//     { nome: "Henrique", idade: 16, curso: "TST", lab: "lab6" },
+//     { nome: "Gabriel", idade: 22, curso: "TII", lab: "lab4" }
+// ])
+
+
+// db.laboratorio.insertMany([
+//     { nome: "lab1", qntd: 30, tipo: "informatica" },
+//     { nome: "lab4", qntd: 24, tipo: "informatica" },
+//     { nome: "lab5", qntd: 14, tipo: "informatica" },
+//     { nome: "lab6", qntd: 30, tipo: "hardware" },
+//     { nome: "lab7", qntd: 40, tipo: "informatica" },
+//     { nome: "lab11", qntd: 35, tipo: "enfermagem" },
+// ])
+
+// db.laboratorio.find()
+
+// db.sala.aggregate([
+//     {
+//         $lookup: {
+//             from: "laboratorio",
+//             localField: "lab",
+//             foreignField: "nome",
+//             as: "info_lab"
+//         }
+//     }
+// ])
+
+
+
+// use("autor")
+
+// db.autor.insertMany([
+//     {nome:"Machado de Assis",nacionalidade:"Brasileiro"},
+//     {nome:"George Orwell",nacionalidade:"Britânico"},
+//     {nome:"Clarice Lispector",nacionalidade:"Brasileira"},
+//     {nome:"J.K.Rowlig",nacionalidade:"Britânica"},
+//     {nome:"Gabriel Garcia Márquez",nacionalidade:"Colombiano"}
+// ])
+
+
+// use("livro")
+
+// db.livro.insertMany([
+//     {titulo:"Dom Casmurro",autor:"Machado de Assis",ano:1899},
+//     {titulo:"1984",autor:"George Orwell",ano:1949},
+//     {titulo:"A Hora da Estrela",autor:"Clarice Lispector",ano:1977},
+//     {titulo:"Harry Potter",autor:"J.K Rowling",ano:1997},
+//     {titulo:"Cem Anos de Solidão",autor:"Gabriel Garcia Márquez",ano:1967},
+
+// ])
+
+// use("livro")
+// db.autor.updateOne(
+//     {}
+// )
+
+
+// db.naves_exploradoras.find(
+// {_id:ObjectId("68f61f9c3430629148bfbf65")}
+
+// )
+
+
+// db.naves_exploradoras.updateOne(
+//     {_id:ObjectId("68f61f9c3430629148bfbf65")},
+//     {$set:{autonomia_dias:"120"}}
+// )
+
+// db.livro.updateOne(
+//     {_id:ObjectId("68fffaa60b15538e7133d016")},
+//     {$set:{ano:1998}}
+// )
+
+
+
+use('autor')
+
+db.autor.find(
+    {
+        $or: [
+            { nacionalidade:"brasileira"  },
+
+            { nacionalidade:'brasileiro'  }
+        ]
+    }
 )
+//harry potter
+//68fffaa60b15538e7133d016
