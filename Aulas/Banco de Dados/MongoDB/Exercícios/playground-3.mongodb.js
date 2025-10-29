@@ -304,14 +304,30 @@
 
 use('autor')
 
-db.autor.find(
-    {
-        $or: [
-            { nacionalidade:"brasileira"  },
+// db.autor.find(
+//     {
+//         $or: [
+//             { nacionalidade:"Brasileira"  },
 
-            { nacionalidade:'brasileiro'  }
-        ]
-    }
-)
+//             { nacionalidade:'Brasileiro'  }
+//         ]
+//     }
+// )
+
 //harry potter
 //68fffaa60b15538e7133d016
+
+//livros e dados dos clientes
+
+db.livros.aggregate([
+    {
+        $lookup: {
+            from: "autor",
+            localField: "titulo",   
+            foreignField: "_id",
+            as: "livroEautor"
+
+        }
+    }
+]
+)
