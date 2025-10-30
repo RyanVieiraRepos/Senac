@@ -1,6 +1,6 @@
 // use('sala')
 
-//acessando o metodo inserir 
+//acessando o metodo inserir
 // db.sala.insertOne({
 //     nome: 'Paulo',
 //     idade: 22,
@@ -109,7 +109,7 @@
 
 // db.aluno.updateOne({
 //    {nome: 'Gabriel',idade:}
-// 
+//
 //})
 // db.clientes.updateOne(
 //     {_id: ObjectId('68eda4672cdceda1b118d548') },
@@ -120,7 +120,7 @@
 
 // db.clientes.find(
 //     {nome: "Lucia"}
-//     {idade: 0, _id:0,curso:0}    
+//     {idade: 0, _id:0,curso:0}
 // )
 
 
@@ -156,7 +156,7 @@
 
 
 //MAIOR ORDEM DECRESCENTE, PRIMEIRO RESULTADO/DOCUMENTO
-// db.alienigenas_turistas.find().sort({gasto_medio:-1}).limit(1) 
+// db.alienigenas_turistas.find().sort({gasto_medio:-1}).limit(1)
 
 
 // db.alienigenas_turistas.find().sort({ destino:1 })
@@ -256,18 +256,35 @@
 
 
 
-// use("autor")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+use("autor")
 
 // db.autor.insertMany([
 //     {nome:"Machado de Assis",nacionalidade:"Brasileiro"},
 //     {nome:"George Orwell",nacionalidade:"Britânico"},
 //     {nome:"Clarice Lispector",nacionalidade:"Brasileira"},
-//     {nome:"J.K.Rowlig",nacionalidade:"Britânica"},
+//     {nome:"J.K Rowling",nacionalidade:"Britânica"},
 //     {nome:"Gabriel Garcia Márquez",nacionalidade:"Colombiano"}
 // ])
 
 
-// use("livro")
+
 
 // db.livro.insertMany([
 //     {titulo:"Dom Casmurro",autor:"Machado de Assis",ano:1899},
@@ -278,7 +295,10 @@
 
 // ])
 
-// use("livro")
+
+
+
+// use("autor")
 // db.autor.updateOne(
 //     {}
 // )
@@ -301,8 +321,7 @@
 // )
 
 
-
-use('autor')
+//
 
 // db.autor.find(
 //     {
@@ -319,14 +338,124 @@ use('autor')
 
 //livros e dados dos clientes
 
-db.livros.aggregate([
+// db.autor.aggregate([
+//     {
+//         $lookup: {
+//             from: "livro",
+//             localField: "nome",   // busco na atual, o campo com as informações iguais de outra tabela
+//             foreignField: "autor",
+//             as: "livroEautor"
+
+//         }
+//     }
+// ]
+// )
+
+
+//"68fff9cfb096aa8bcf627f29"
+//jk rowling
+
+// use('informatica')
+
+// db.clientes.insertMany([
+//     {nome:"Ana",cidade:"São Paulo"},
+//     {nome:"Bruno",cidade:"Rio de Janeiro"},
+//     {nome:"Carla",cidade:"Belo Horizonte"},
+//     {nome:"Daniel",cidade:"Curitiba"},
+//     {nome:"Elisa",cidade:"Porto Alegre"}
+// ])
+
+// db.pedidos.insertMany([
+//     {cliente:'Ana',produto:'Notebook',valor:3500},
+//     {cliente:'Bruno',produto:'Celular',valor:1800},
+//     {cliente:'Carla',produto:'Tablet',valor:1200},
+//     {cliente:'Daniel',produto:'Monitor',valor:900},
+//     {cliente:'Elisa',produto:'Impressora',valor:700},
+// ])
+
+// db.pedidos.updateOne(
+//     {_id:ObjectId('6903b62cdba3708d31b49d34')},
+//     {$set:{valor:950}}
+// )
+
+// db.livro.updateOne(
+//     {_id:ObjectId("68fffaa60b15538e7133d016")},
+//     {$set:{ano:1998}}
+// )
+
+
+
+// db.clientes.aggregate(
+//     {
+//         $lookup:{
+//             from:'pedidos',
+//             localField:'nome',
+//             foreignField:'cliente',
+//             as:'pedidosClientes'
+//         }
+//     }
+// )
+
+
+
+use('cinema')
+
+// db.filmes.insertMany(
+//     [
+//         {titulo:'O grande Golpe',ano:2005,genero:'Ação',estudio:'CineMax'},
+//         {titulo:'Amora em paris',ano:2010,genero:'Romance',estudio:'Lumière'},
+//         {titulo:'Mistério na Neve',ano:2018,genero:'Suspense',estudio:'CineMax'},
+//         {titulo:'Aventura Submarina',ano:2022,genero:'Aventura',estudio:'Oceanic'},
+//         {titulo:'O Código Perdido',ano:2015,genero:'Mistério',estudio:'Lumière'}
+//     ]
+// )
+
+
+// db.ator.insertMany([
+//     {nome:'João Silva',idade:35,filme:'O Grande Golpe'},
+//     {nome:'Maria Costa',idade:28,filme:'Amor em Paris'},
+//     {nome:'Pedro Martins',idade:42,filme:'Mistério na Neve'},
+//     {nome:'Ana Ribeiro',idade:30,filme:'Aventura Subimarina'},
+//     {nome:'Lucas Andrade',idade:33,filme:'O Código Perdido'},
+// ])
+
+
+// db.estudio.insertMany([
+//     {nome:'CineMax',sede:'São Paulo',fundado:1998},
+//     {nome:'Lumière',sede:'Rio de Janeiro',fundado:2005},
+//     {nome:'Oceanic',sede:'Recife',fundado:2012},
+// ])
+
+
+
+// db.filmes.updateOne(
+//         {_id:ObjectId('6903bb2bd1f22df1fdf1ec2c')},
+//         {$set:{genero:'Ação'}}
+//     )
+
+
+
+//6903bb2bd1f22df1fdf1ec2c
+
+// db.estudio.find(
+//         {fundado:{$lt:2010}}
+//     )
+
+db.filmes.aggregate([
     {
         $lookup: {
-            from: "autor",
-            localField: "titulo",   
-            foreignField: "_id",
-            as: "livroEautor"
-
+            from: 'estudio',
+            localField: 'estudio',
+            foreignField: 'nome',
+            as: 'FilmeEestudio'
+        }
+    },
+    {
+        $lookup: {
+            from: 'ator',
+            localField: 'titulo',
+            foreignField: 'filme',
+            as: 'FilmeEator'
         }
     }
 ]
