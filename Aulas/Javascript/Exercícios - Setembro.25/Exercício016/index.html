@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta author="Ryan Vieira Assumpção">
+  <meta description="Descrição">
+
+
+  <title>Objetos</title>
+
+
+  <link rel="icon" type="image/x-icon" href="./Js Icon.png" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+</head>
+
+<body class="bg-dark text-white justify-content-center align-items-center d-flex ">
+
+  <form id="form" class="col-auto justify-content-center d-flex flex-column container text-center mt-5">
+
+
+    <strong class="h1">
+      Calculadora
+    </strong>
+
+    <input class="rounded-2 mb-3 p-1" placeholder="Valor" id="valor">
+
+    <input class="rounded-2 mb-3 p-1" placeholder="%" id="desconto">
+
+    <select class="form-select mb-3" id="select">
+      <option value="1">Desconto</option>
+      <option value="2">Acrescimo</option>
+
+    </select>
+
+    <div class="d-flex flex-column text-center">
+      <strong class="h5 mb-1"> valor total a pagar: </strong>
+      <strong class="h5 text-success" id="result"></strong>
+    </div>
+
+
+    <button class="btn btn-primary" type="button" id="calcular">Calcular</button>
+
+
+    <div id="historico">
+
+    </div>
+  </form>
+  </div>
+
+
+
+
+
+
+
+
+
+  <div style="width: 300px;height: 120px;justify-content: space-between; background-color: rgb(68, 68, 68); border-radius: 10px; padding: 20px;display: flex; flex-direction: column;position: fixed;
+    top: 30%;
+    left: 42%;display: none; " id="popup">
+
+    <strong class="h5">Preencha todos os campos!</strong>
+
+
+    <button
+      class="btn btn-warning"
+      id="closePop" type="button">Ok</button>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+
+
+
+
+</body>
+
+</html>

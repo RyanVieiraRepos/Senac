@@ -42,16 +42,19 @@ function fnListar() {
 
 
 
-    contatos.forEach((umContato, i) => { //para cada objeto da array
-        dados += `  <div class="card m-3" style="width: 18rem;">
+    contatos.forEach((umContato,i) => { //para cada objeto da array
+        dados += `  
+    <div class="card m-3" style="width: 18rem ;" >
+
         <img class="card-img-top" src="${umContato.foto}" alt="Imagem não carregada">
 
         <div class="card-body">
           <h5 class="card-title">${umContato.nome}</h5>
           <p class="card-text">${umContato.telefone}</p>
           <p class="card-text">${umContato.email}</p>
-          <a href="#" class="btn btn-primary bg-danger" id='cardDel'>Excluir Contato</a>
+          <button type='button' class="btn btn-primary bg-danger" id='cardDel' onClick="fnExluir(${i})" >Excluir Contato</button>
         </div>
+
       </div>
     </div>
 
@@ -61,12 +64,14 @@ function fnListar() {
     document.getElementById('listaDeContatos').innerHTML = dados
 }
 
-function fnExluir() {
-
-
+function fnExluir(indice) {
+contatos.splice(indice,1)
+fnListar()
 }
 
-
+function fnLimpar(){
+    document.getElementById('formulario').reset()
+}
 
 
 
@@ -77,7 +82,7 @@ function fnExluir() {
 
 
 document.getElementById('btSalvar').addEventListener('click', () => {
-    fnSalvar(); fnListar()
+    fnSalvar(); fnListar(); fnLimpar()
 })
 
 
