@@ -12,7 +12,7 @@
   <title>Objetos</title>
 
 
-  
+
   <link rel="icon" type="image/x-icon" href="./Js Icon.png" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -21,38 +21,42 @@
 
 </head>
 
-<body class="bg-dark text-white justify-content-center align-items-center d-flex ">
+<body class="bg-dark text-white justify-content-center align-items-center d-flex flex-column " >
 
-  <form class="d-flex flex-column mt-5">
-    <input placeholder="Nome do Filme" class="p-2 rounded h5 mb-4" id="nome">
-    <input placeholder="Link da foto da Capa" class="p-2 rounded h5 mb-4">
+  <form class="d-flex flex-column mt-5" id="form">
+    <input placeholder="Nome do Filme" class="p-2 rounded h5 mb-4 text-black" id="nome">
+    <input placeholder="Link da foto da Capa" class="p-2 rounded h5 mb-4 text-black" id="linkFoto">
 
     <div class="d-flex flex-row mb-4">
-      <input placeholder="Ano" class="p-2 rounded h5 me-2">
-      <select class="form-select ms-2" aria-label="Default select example">
-        <option selected>Avaliação</option>
-        <option value="1">⭐</option>
-        <option value="2">⭐⭐</option>
-        <option value="3">⭐⭐⭐</option>
-        <option value="4">⭐⭐⭐⭐</option>
-        <option value="5">⭐⭐⭐⭐⭐</option>
+      <input placeholder="Ano" class="p-2 rounded h5 me-2 text-black" id="ano">
+      <select class="form-select ms-2" aria-label="Default select example" id="select">
+        
+        <option value="⭐">⭐</option>
+        <option value="⭐⭐">⭐⭐</option>
+        <option value="⭐⭐⭐">⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
       </select>
     </div>
 
-    <input placeholder="Link do Trailer " class="p-2 rounded h5 mb-4">
+    <input placeholder="Link do Trailer " class="p-2 rounded h5 mb-4 text-black" id="linkTrailer">
 
     <div class="d-flex flex-row mb-4 mt-3">
-      <input placeholder="Gênero" class="p-2 rounded h5 me-2">
-      <input placeholder="Duração" class="p-2 rounded h5 ms-2">
+      <input placeholder="Gênero" class="p-2 rounded h5 me-2 text-black" id="genero">
+      <input placeholder="Duração" class="p-2 rounded h5 ms-2 text-black" id="duracao">
     </div>
-    <textarea placeholder="Descrição" class="p-2 rounded h5 mb-5"></textarea>
+    <textarea placeholder="Descrição" class="p-2 rounded h5 mb-5 text-black" id="desc"></textarea>
 
-    <button type="button" class="btn btn-primary">Salvar</button>
+    <button type="button" class="btn btn-primary" id="saveBtn">Salvar</button>
   </form>
 
 
+ 
+  <div class="col-12 d-flex flex-wrap justify-content-center mt-5" id="lista">
+  
+    
 
-
+  </div>
 
 
 
@@ -66,7 +70,7 @@
     <strong class="h5">Preencha todos os campos!</strong>
 
 
-    <button class="btn btn-warning" id="closePop" type="button">Ok</button>
+    <button class="btn btn-danger" id="closePop" type="button">Ok</button>
   </div>
 
 
